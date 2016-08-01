@@ -11,7 +11,7 @@ function getResults(searchTerm) {
 }
 
 
-$(function () {
+$(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
