@@ -2,20 +2,21 @@
 
 <head>
     <title>AJAX Test</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-
+    <h2>YouTube Video Searcher</h2><img id="logo" src="images/youtube-logo.png">
+    <p>Uses AJAX, Jquery, JSON</p>
     <form id=search-term>
-        <input type=text id=query placeholder="enter query"></input>
+        <input type=text id="query" placeholder="enter query"></input>
         <input type=button name=submit value="Search">
     </form>
 
     <div class="results">
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="apps/app.js"></script>
 </body>
 

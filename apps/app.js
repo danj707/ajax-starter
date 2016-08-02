@@ -34,9 +34,9 @@ function showResults(data) {
         }
 
 
-        var content = "<p><a href=\"https://www.youtube.com/watch?v=" + id + "\"\>" + "<img src=\"" + thumbnail + "\"></a></p>";
+        var content = "<p><a target='_blank' href=\"https://www.youtube.com/watch?v=" + id + "\"\>" + "<img src=\"" + thumbnail + "\"></a></p>";
         $('div.results').append(content);
-        var channelLink = "<a href=\"https://www.youtube.com/channel/" + channel + "\">Watch Channel</a>"
+        var channelLink = "<a target='_blank' href=\"https://www.youtube.com/channel/" + channel + "\">Watch more from this channel...</a>"
         $('div.results').append(channelLink);
         console.log(channelLink)
     }
