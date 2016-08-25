@@ -21,23 +21,29 @@ function getResults(searchTerm) {
 
 function showResults(data) {
     $('div.results').empty();
-    for (i = 0; i < data.items.length; i++) {
+    $.each(data, function (index, value) {
 
-        var title = data.items[i].snippet.title;
-        var id = data.items[i].id.videoId;
-        var thumbnail = data.items[i].snippet.thumbnails.medium.url;
-        var channel = data.items[i].snippet.channelId;
-        if (data.items[i].id.videoId) {
-            id = data.items[i].id.videoId;
-        } else {
-            id = "No video";
-        }
+        console.log(data.items);
 
-
-        var content = "<p><a target='_blank' href=\"https://www.youtube.com/watch?v=" + id + "\"\>" + "<img src=\"" + thumbnail + "\"></a></p>";
-        $('div.results').append(content);
-        var channelLink = "<a target='_blank' href=\"https://www.youtube.com/channel/" + channel + "\">Watch more from this channel...</a>"
-        $('div.results').append(channelLink);
-        console.log(channelLink)
-    }
+    });
+    //    for (i = 0; i < data.items.length; i++) {
+    //
+    //        var title = data.items[i].snippet.title;
+    //        var id = data.items[i].id.videoId;
+    //        var thumbnail = data.items[i].snippet.thumbnails.medium.url;
+    //        var channel = data.items[i].snippet.channelId;
+    //        if (data.items[i].id.videoId) {
+    //            id = data.items[i].id.videoId;
+    //        } else {
+    //            id = "No video";
+    //        }
+    //
+    //
+    //
+    //        var content = "<p><a target='_blank' href=\"https://www.youtube.com/watch?v=" + id + "\"\>" + "<img src=\"" + thumbnail + "\"></a></p>";
+    //        $('div.results').append(content);
+    //        var channelLink = "<a target='_blank' href=\"https://www.youtube.com/channel/" + channel + "\">Watch more from this channel...</a>"
+    //        $('div.results').append(channelLink);
+    //        console.log(channelLink)
+    //    }
 }
